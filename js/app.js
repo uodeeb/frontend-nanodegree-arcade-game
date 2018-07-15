@@ -155,9 +155,11 @@ resetGame = function(){
     enemy01 = new Enemy(0, 60,150);
     enemy02 = new Enemy(0,226, 80 );
     enemy03 = new Enemy(0, 143, 90);
+    enemy04 = new Enemy(0, 60,190)
     allEnemies.push(enemy01);
     allEnemies.push(enemy02);
     allEnemies.push(enemy03);
+    allEnemies.push(enemy04);
 }
 
 /*TO-DO:________________________Add music alerts______________*/
