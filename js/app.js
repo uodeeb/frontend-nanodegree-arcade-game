@@ -56,6 +56,8 @@ Enemy.prototype.update = function(dt) {
         player.y = 300;
         // add crash music
         crashMusic.play();
+        // change bg color randomly
+        randomBgColor();
         // reset game after collision
         resetGame();
     }
@@ -87,6 +89,8 @@ class player {
             //TO-DO: reset the game once player reach the safe side
             // add a safe arrival music
             arrivalMusic.play();
+            // change bg color randomly
+            randomBgColor();
             resetGame();
         }
     }
@@ -143,15 +147,24 @@ function sound(src) {
         this.sound.pause();
     }
 }
+/*TO-DO:________________________instantiate sound object ______________*/
+
 let bgMusic = new sound('sounds/Funny03.mp3');
 let crashMusic = new sound('sounds/crashMusic.mp3');
 let arrivalMusic = new sound('sounds/arrivalMusic.mp3');
 
-
-
-
-
-
+/*TO-DO:____________build a random bg color function______________*/
+function randomBgColor() {
+    var x = Math.floor(Math.random() * 256);
+    var y = Math.floor(Math.random() * 256);
+    var z = Math.floor(Math.random() * 256);
+    var bgColor = "radial-gradient(circle," + "rgba(" + x + "," + y + "," + z + ",0)" + "," + "rgba(" + z + "," + y + "," + x + ",1)" + ")";
+    
+ console.log(bgColor);
+  
+    document.body.style.background = bgColor;
+   
+    }
 
 
 
