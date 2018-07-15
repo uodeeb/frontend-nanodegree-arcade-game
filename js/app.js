@@ -27,7 +27,7 @@ player reach the other side_______player clashed with an enemy
 ----------------------------------------------------
 ____________________________________________________
 /* _________________ the real code _______________*/
-/* ___________________enemy object ___________________*/
+/* TO-DO:___________________enemy object ___________________*/
 let allEnemies = [];
 let Enemy = function(x, y, speed) {
     this.x = (Math.floor(Math.random() * (1000)) + 2);
@@ -38,7 +38,7 @@ let Enemy = function(x, y, speed) {
 };
 
 Enemy.prototype.update = function(dt) {
-    // looping enemies across the canvas
+    // TO-DO: looping enemies across the canvas
     this.x += dt * this.speed;  
     if (this.x >= 510){
         this.x = -48;
@@ -48,7 +48,7 @@ Enemy.prototype.update = function(dt) {
 Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
-/*________________________instantiate enemy object ______________*/
+/*TO-DO:________________________instantiate enemy object ______________*/
 enemy01 = new Enemy(0, 60,150);
 enemy02 = new Enemy(0,226, 80 );
 enemy03 = new Enemy(0, 143, 90);
@@ -56,7 +56,7 @@ allEnemies.push(enemy01);
 allEnemies.push(enemy02);
 allEnemies.push(enemy03);
 
-/*_________________________ Player object ___________________*/
+/*TO-DO:_________________________ Player object ___________________*/
 class player {
     constructor(x,y){
         this.x = x;
@@ -66,14 +66,30 @@ class player {
     update(dt) {
    
     }
-    handleInput(){
+    handleInput(key){
+        // TO-DO: player moves with keypresses
+        if (key === 'up' ){
+            this.y = this.y - 87;
+       
+        }
+        if ((key === 'down')&&(this.y < 387)){
+            this.y = this.y + 87;
+        }
+
+        if ((key === 'left') && (this.x >= 50)){
+            this.x = this.x - 103;
+        }
+        
+        if ((key === 'right')&&(this.x < 403)){
+            this.x = this.x + 103;
+        }
 
     }
     render() {
         ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
     }
 }
-/*________________________instantiate player class ______________*/
+/*TO-DO:________________________instantiate player class ______________*/
 player = new player (300, 300);
 
 
@@ -90,7 +106,7 @@ player = new player (300, 300);
 
 
 
-/* _________________________Add event listener _______________*/
+/*TO-DO: _________________________Add event listener _______________*/
 document.addEventListener('keyup', function(e) {
     var allowedKeys = {
         37: 'left',
