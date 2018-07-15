@@ -29,6 +29,7 @@ ____________________________________________________
 /* _________________ the real code _______________*/
 /* TO-DO:___________________enemy object ___________________*/
 let allEnemies = [];
+let allArivals = [];
 let Enemy = function(x, y, speed) {
     this.x = (Math.floor(Math.random() * (1000)) + 2);
     this.y = y;
@@ -86,11 +87,38 @@ class player {
         if (this.y == -48){
             this.y = 300;
             this.x = 300;
-            //TO-DO: reset the game once player reach the safe side
+            let s = this.y;
+           allArivals.push(s);
+           console.log(allArivals);
+           if (allArivals.length === 5){
+/* TO-DO: ________________Add a winner message ___________________*/
+return swal("Congratulation! You win this game", {
+    buttons: {
+      cancel: "No, That's enough!",
+      catch: {
+        text: "Are you going to win again?!",
+        value: "catch",
+      },  
+    },
+  })
+  .then((value) => {
+    switch (value) {
+      case "catch":
+        swal("Smart choice!!", "Try this round!", "success");
+        break;
+      default:
+        swal("Mmmm, have things to do!", "That's okay, Take care");
+    }
+   resetGame();
+   allArivals = [];
+  });
+  
+           }
             // add a safe arrival music
             arrivalMusic.play();
             // change bg color randomly
             randomBgColor();
+            //TO-DO: reset the game once player reach the safe side
             resetGame();
         }
     }
@@ -123,6 +151,7 @@ player = new player (300, 300);
 /*TO-DO:________________________game reset function______________*/
 resetGame = function(){
     allEnemies = [];
+    
     enemy01 = new Enemy(0, 60,150);
     enemy02 = new Enemy(0,226, 80 );
     enemy03 = new Enemy(0, 143, 90);
