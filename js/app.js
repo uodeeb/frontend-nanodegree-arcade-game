@@ -43,7 +43,7 @@ Enemy.prototype.update = function(dt) {
         if (this.x >= 510){
         this.x = -48;
         }
-    // TO-DO: build a collision rule
+    // TO-DO: build a collision ru
     playerSurroundX = player.x + 65;
     playerSurroundY = player.y + 65;
     enemySurroundX = this.x + 65;
@@ -54,6 +54,8 @@ Enemy.prototype.update = function(dt) {
         (playerSurroundY > this.y))){
         player.x = 300;
         player.y = 300;
+        // reset game after collision
+        resetGame();
     }
 };
 
@@ -108,7 +110,16 @@ class player {
 /*TO-DO:________________________instantiate player class ______________*/
 player = new player (300, 300);
 
-
+/*TO-DO:________________________game reset function______________*/
+resetGame = function(){
+    allEnemies = [];
+    enemy01 = new Enemy(0, 60,150);
+    enemy02 = new Enemy(0,226, 80 );
+    enemy03 = new Enemy(0, 143, 90);
+    allEnemies.push(enemy01);
+    allEnemies.push(enemy02);
+    allEnemies.push(enemy03);
+}
 
 
 
