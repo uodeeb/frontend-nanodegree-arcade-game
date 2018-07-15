@@ -45,6 +45,30 @@ Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
+/*_________________________ Player object ___________________*/
+class player {
+    constructor(x,y){
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* _________________________Add event listener _______________*/
 document.addEventListener('keyup', function(e) {
     var allowedKeys = {
         37: 'left',
