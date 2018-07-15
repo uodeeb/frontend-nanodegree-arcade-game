@@ -48,7 +48,18 @@ Enemy.prototype.render = function() {
 /*_________________________ Player object ___________________*/
 class player {
     constructor(x,y){
-        
+        this.x = x;
+        this.y = y;
+        this.sprite = 'images/char-pink-girl.png'  
+    }
+    update(dt) {
+   
+    }
+    handleInput(){
+
+    }
+    render() {
+        ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
     }
 }
 
