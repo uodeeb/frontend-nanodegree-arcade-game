@@ -44,6 +44,13 @@ Enemy.prototype.update = function(dt) {
 Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
+/*________________________instantiate enemy object ______________*/
+enemy01 = new Enemy(0, 60,150);
+enemy02 = new Enemy(0,226, 80 );
+enemy03 = new Enemy(0, 143, 90);
+allEnemies.push(enemy01);
+allEnemies.push(enemy02);
+allEnemies.push(enemy03);
 
 /*_________________________ Player object ___________________*/
 class player {
