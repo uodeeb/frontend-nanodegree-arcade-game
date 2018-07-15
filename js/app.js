@@ -40,8 +40,20 @@ let Enemy = function(x, y, speed) {
 Enemy.prototype.update = function(dt) {
     // TO-DO: looping enemies across the canvas
     this.x += dt * this.speed;  
-    if (this.x >= 510){
+        if (this.x >= 510){
         this.x = -48;
+        }
+    // TO-DO: build a collision rule
+    playerSurroundX = player.x + 65;
+    playerSurroundY = player.y + 65;
+    enemySurroundX = this.x + 65;
+    enemySurroundY = this.y + 65;
+        if (((player.x < enemySurroundX)&&
+        (playerSurroundX > this.x))&&
+        ((player.y < enemySurroundY)&&
+        (playerSurroundY > this.y))){
+        player.x = 300;
+        player.y = 300;
     }
 };
 
