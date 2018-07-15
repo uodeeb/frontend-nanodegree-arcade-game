@@ -64,10 +64,14 @@ class player {
         this.sprite = 'images/char-pink-girl.png'  
     }
     update(dt) {
-   
+        //TO-DO: when player reach the canvas enemy-safe area >> return to initial position
+        if (this.y == -48){
+            this.y = 300;
+            this.x = 300;
+        }
     }
     handleInput(key){
-        // TO-DO: player moves with keypresses
+        // TO-DO: player moves with keypresses & never leave canvas
         if (key === 'up' ){
             this.y = this.y - 87;
        
