@@ -69,8 +69,8 @@ class player {
         ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
     }
 }
-
-
+/*________________________instantiate player class ______________*/
+player = new player (300, 300);
 
 
 
