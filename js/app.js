@@ -27,21 +27,23 @@ player reach the other side_______player clashed with an enemy
 ----------------------------------------------------
 ____________________________________________________
 /* _________________ the real code _______________*/
-
-var Enemy = function() {
-
+/* ___________________enemy object ___________________*/
+let allEnemies = [];
+let Enemy = function(x, y, speed) {
+    this.x = (Math.floor(Math.random() * (1000)) + 2);
+    this.y = y;
+    this.speed= speed;
     this.sprite = 'images/enemy-bug.png';
+    
 };
 
 Enemy.prototype.update = function(dt) {
    
 };
 
-
 Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
-
 
 document.addEventListener('keyup', function(e) {
     var allowedKeys = {
