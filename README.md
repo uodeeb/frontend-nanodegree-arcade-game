@@ -16,7 +16,7 @@ have to pass some enemies and reach the safe side.
     and reach the safe side with no collision with 
     enemies.
 
-*   To play the game directly [here.](#)
+*   To play the game directly [here.](https://uodeeb.github.io/uodeeb-arcade-game/)
 
 ## Resources
 
