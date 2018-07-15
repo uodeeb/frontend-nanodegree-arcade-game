@@ -43,7 +43,7 @@ Enemy.prototype.update = function(dt) {
         if (this.x >= 510){
         this.x = -48;
         }
-    // TO-DO: build a collision ru
+    // TO-DO: build a collision rule
     playerSurroundX = player.x + 65;
     playerSurroundY = player.y + 65;
     enemySurroundX = this.x + 65;
@@ -54,6 +54,8 @@ Enemy.prototype.update = function(dt) {
         (playerSurroundY > this.y))){
         player.x = 300;
         player.y = 300;
+        // add crash music
+        crashMusic.play();
         // reset game after collision
         resetGame();
     }
@@ -82,6 +84,10 @@ class player {
         if (this.y == -48){
             this.y = 300;
             this.x = 300;
+            //TO-DO: reset the game once player reach the safe side
+            // add a safe arrival music
+            arrivalMusic.play();
+            resetGame();
         }
     }
     handleInput(key){
@@ -121,9 +127,25 @@ resetGame = function(){
     allEnemies.push(enemy03);
 }
 
+/*TO-DO:________________________Add music alerts______________*/
 
-
-
+function sound(src) {
+    this.sound = document.createElement("audio");
+    this.sound.src = src;
+    this.sound.setAttribute("preload", "auto");
+    this.sound.setAttribute("controls", "none");
+    this.sound.style.display = "none";
+    document.body.appendChild(this.sound);
+    this.play = function(){
+        this.sound.play();
+    }
+    this.stop = function(){
+        this.sound.pause();
+    }
+}
+let bgMusic = new sound('sounds/Funny03.mp3');
+let crashMusic = new sound('sounds/crashMusic.mp3');
+let arrivalMusic = new sound('sounds/arrivalMusic.mp3');
 
 
 
