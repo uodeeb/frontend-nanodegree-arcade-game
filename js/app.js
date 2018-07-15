@@ -38,7 +38,11 @@ let Enemy = function(x, y, speed) {
 };
 
 Enemy.prototype.update = function(dt) {
-   
+    // looping enemies across the canvas
+    this.x += dt * this.speed;  
+    if (this.x >= 510){
+        this.x = -48;
+    }
 };
 
 Enemy.prototype.render = function() {
