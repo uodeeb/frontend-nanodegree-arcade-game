@@ -18,6 +18,9 @@ have to pass some enemies and reach the safe side.
 *   To run the game go to the direct link [here.](https://uodeeb.github.io/uodeeb-arcade-game/)
 
 *   For developers: you can find the project as a Github repository [here.](https://github.com/uodeeb/uodeeb-arcade-game)
+                    Game runs based on three javascript files, a resources file, which used to cache all the used image for 
+                    more performance improvment. An engine file, where all basic game functions of redrwaing the game board 
+                    and  rendring are found. An app file, where all the game logic rules and game objects are placed.
 
 ## Player Instruction
 
@@ -44,7 +47,7 @@ For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Authors
 
-*   This game is developed by Mohammad Allam based on a starter project files from Udacity FEND Nanodegree program.
+*   This game is developed by [Mohammad Allam](https://www.facebook.com/uodeeb) based on a starter project files from Udacity FEND Nanodegree program.
 
 ## Acknowledgments
 
