@@ -5,6 +5,7 @@ have to pass some enemies and reach the safe side.
 ## Table of Contents
 
 * [Getting Started](#Getting Started)
+* [Player Instruction](#Player Instruction)
 * [Resources](#Resources)
 * [Contributing](#contributing)
 * [Authors](#Authors)
@@ -12,11 +13,19 @@ have to pass some enemies and reach the safe side.
 
 ## Getting Started
 
+*   This game is hosted on github pages and do not need any previous installations.
+
+*   To run the game go to the direct link [here.](https://uodeeb.github.io/uodeeb-arcade-game/)
+
+*   For developers: you can find the project as a Github repository [here.](https://github.com/uodeeb/uodeeb-arcade-game)
+
+## Player Instruction
+
 *   Your job as a player is to pass all the enemies
     and reach the safe side with no collision with 
     enemies.
-
-*   To play the game directly [here.](https://uodeeb.github.io/uodeeb-arcade-game/)
+    
+*   Winner will pass the game board without collision with enemies for five successive times.
 
 ## Resources
 
@@ -28,17 +37,18 @@ have to pass some enemies and reach the safe side.
 
 *   This project made a great use of different contributions came from different developers.
 
-*   This game is under developing nowadays to add some game levels and new approaches to user experience so, any contributions are really appreciated.
+*   This game is under developing nowadays to add some game levels and new approaches to user experience so, any contributions are      really appreciated.
     
 
 For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+
 ## Authors
 
 *   This game is developed by Mohammad Allam based on a starter project files from Udacity FEND Nanodegree program.
 
 ## Acknowledgments
 
-*   This project used the code of these developers, take a look at their lovely work.
+*   This project inspires the code of these developers, take a look at their lovely work.
 
     -   [Brenopolanski](https://github.com/brenopolanski/udacity-classic-arcade-game-clone)
     -   [jshanks24](https://github.com/jshanks24/Udacity-Arcade-Game)
